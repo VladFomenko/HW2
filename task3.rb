@@ -21,8 +21,7 @@ result_like_citys =  arr_like_citys.map {|i| i.strip.squeeze(" ")}
 
 puts 'Please, enter your most hated cities'
 hated_cities = gets.chomp
-arr_hated_cities = hated_cities.split(',')
-.sort_by{|i| i.scan(/\w+/).first}
+arr_hated_cities = hated_cities.split(',').sort_by{|i| i.scan(/\w+/).first}
 result_hated_cities =  arr_hated_cities.map {|i| i.strip.squeeze(" ")}
 
 result = result_like_citys + result_hated_cities
