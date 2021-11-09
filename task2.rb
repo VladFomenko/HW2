@@ -17,10 +17,9 @@ puts 'Please, enter any number'
 number = gets.chomp
 
 def check_numbers(number)
-  acc = 0
-  arr_numbers = number.to_s.split(//)
-  arr_numbers.each { |i| acc += 1 if i.to_i == 1 }
-  acc > 1 ? false : true
+  arr_numbers = number.split('')
+
+  arr_numbers.count('1') > 1 ? false : true
 end
 
 while check_numbers(number)
@@ -28,4 +27,4 @@ while check_numbers(number)
   number = gets.chomp
 end
 
-puts 'Oh no, your used \'1\' a lot, sorry. Lucky next time!'
+puts 'Oh no, your used "1" a lot, sorry. Lucky next time!'
